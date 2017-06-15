@@ -1,7 +1,8 @@
 # FIXME: Workaround until https://github.com/rails-api/active_model_serializers/pull/1029
 #   or similar gets merged.
 # class JsonApiDasherized < ActiveModel::Serializer::Adapter::JsonApi
-class JsonApiDasherized < ActiveModelSerializers::Adapter::JsonApi
+# class JsonApiDasherized < ActiveModelSerializers::Adapter::JsonApi
+class JsonApiDasherized < ActiveModel::Serializer::Adapter::JsonApi
   def resource_identifier_for(serializer)
     type = resource_identifier_type_for(serializer)
     id   = resource_identifier_id_for(serializer)
